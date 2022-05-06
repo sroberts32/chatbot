@@ -1,6 +1,6 @@
 package day50.Bonus.src;
 
-public class AddBinary {
+public class MultiplyBinary {
     public static void main(String[] args) {
 
         String input0 = "10";
@@ -9,8 +9,9 @@ public class AddBinary {
         int number0 = Integer.parseInt(input0, 2);
         int number1 = Integer.parseInt(input1, 2);
 
-        int sum = number0 + number1;
-        // System.out.println(sum);
-        System.out.println(Integer.toBinaryString(sum));
+        int product = number0 * number1;
+        // System.out.println(product);
+        System.out.println(Integer.toBinaryString(product));
+        
     }
 }
