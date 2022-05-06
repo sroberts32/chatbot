@@ -2,7 +2,16 @@
 
 import java.util.Scanner;
 
-public class ZExtraMethods {
+public class ZOnePageChatbot {
+    public static void main(String[] args) throws Exception {
+        greetingMethod();
+        remindName();
+        guessAge();
+        countTo();
+        programmingKnowledge();
+        daysOfWeek();
+    }
+
     public static void greetingMethod() {
         Scanner scanner = new Scanner(System.in);
 
@@ -16,9 +25,8 @@ public class ZExtraMethods {
 
         System.out.println("I'm sorry. I had a minor glitch. Can you remind me of your name again please.");
         String nameAgain = scanner2.nextLine();
-        System.out
-                .println("Greetings, " + nameAgain + ". It is nice to meet you. I will remember your name this time.");
-    }
+        System.out.println("Greetings, " + nameAgain + ". It is nice to meet you. I will remember your name this time.");
+            }
 
     public static void guessAge() {
         Scanner scanner3 = new Scanner(System.in);
@@ -64,27 +72,16 @@ public class ZExtraMethods {
         System.err.println("4. new String");
         int answer = Integer.valueOf(scanner5.nextLine());
 
-        if (answer == 3) {
-            System.out.println("Great job! That's correct.");
-        } else if (answer == 1 || answer == 2 || answer == 4) {
-            System.out.println("That is incorrect, please try again.");
-        } else {
-            System.out.println("That is not a valid response. Please respond with 1, 2, 3 or 4.");
+        while (answer != 3) {
+            answer = Integer.valueOf(scanner5.nextLine());
+            if (answer == 3) {
+                System.out.println("Correct!");
+            } else if (answer == 1 || answer == 2 || answer == 4) {
+                System.out.println("Incorrect. Please try again.");
+            } else {
+                System.out.println("That is not a valid response. Please respond with 1, 2, 3 or 4.");
+            }
         }
-
-        // while (true) {
-        //     if (answer == 3) {
-        //         System.out.println("Great job! That's correct.");
-        //         break;
-        //     }
-        //     if (answer == 1 || answer == 2 || answer == 4) {
-        //         System.out.println("That is incorrect, please try again.");
-        //         continue;
-        //     }
-        //     if ((answer != 1 || answer != 2 || answer != 3 || answer != 4));
-        //     System.out.println("That is not a valid response. Please respond with 1, 2, 3 or 4.");
-        //     continue;
-        // }
     }
 
     public static void daysOfWeek() {
@@ -100,7 +97,7 @@ public class ZExtraMethods {
                 System.out.println("Mondays I feel like C3PO. Stiff and uptight.");
                 break;
             case 2:
-                System.out.println("Tuesdays' I feel like Data. Dialed in and ready.");
+                System.out.println("Tuesdays I feel like Data. Dialed in and ready.");
                 break;
             case 3:
                 System.out.println("Wednesdays I feel like a cylon. Putting on a happy face to get through the week.");
