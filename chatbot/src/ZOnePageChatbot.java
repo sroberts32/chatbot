@@ -70,18 +70,17 @@ public class ZOnePageChatbot {
         System.out.println("2: string");
         System.out.println("3. String");
         System.err.println("4. new String");
-        int answer = Integer.valueOf(scanner5.nextLine());
 
-        while (answer != 3) {
-            answer = Integer.valueOf(scanner5.nextLine());
+        while (true) {
+            int answer = Integer.valueOf(scanner5.nextLine());
             if (answer == 3) {
                 System.out.println("Correct!");
+                break;
             } else if (answer == 1 || answer == 2 || answer == 4) {
                 System.out.println("Incorrect. Please try again.");
             } else {
                 System.out.println("That is not a valid response. Please respond with 1, 2, 3 or 4.");
             }
-        }
     }
 
     public static void daysOfWeek() {
